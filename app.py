@@ -1,6 +1,17 @@
+from flask import Flask, jsonify
 from bayeta import frotar
 
-print("Hola, mundo")
+app = Flask(__name__)
 
-# Comprobación de que funciona correctamente
-frotar()
+@app.route('/')
+def hola_mundo():
+	return "<h1>Hola, mundo</h1><p>Esta es la Bayeta de la fortuna</p>"
+
+@app.route('/frotar/<int:n_frases>', methods=['GET'])
+def get_frotar(n_frases):
+	resultado = frotar(n_frases)
+	return jsonify({"frases": resultado})
+
+if __name__ == '__main__':
+	app.run(debug=True, port=5000)
+
