@@ -20,3 +20,6 @@ pip install -r requirements.txt
 ### 3. Comprobación
 Para comprobar que la aplicación funciona ejecuta:
 `python3 app.py`
+
+### NOTA:
+Asegúrate de tener un fichero `frases.txt` con frases separadas por un salto de línea
