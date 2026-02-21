@@ -23,3 +23,9 @@ Para comprobar que la aplicación funciona ejecuta:
 
 ### NOTA:
 Asegúrate de tener un fichero `frases.txt` con frases separadas por un salto de línea
+
+### Despliegue en Docker
+Si tienes Docker instalado, puedes ejecutar la aplicación sin configurar Python localmente:
+
+1. **Construir una imagen:** `docker build -t bayeta-app .`
+2. **Ejecutar el contenedor:** `docker run -p 5000:5000 bayeta-app`
