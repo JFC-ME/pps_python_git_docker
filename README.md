@@ -15,6 +15,7 @@ Se recomienda usar el entorno virtual de Python:
 Una vez activado el entorno, instala las librerías necesarias con el siguiente comando:
 ```bash
 pip install -r requirements.txt
+```
 
 ### 3. Comprobación
 Para comprobar que la aplicación funciona ejecuta:
