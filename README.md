@@ -29,3 +29,6 @@ Si tienes Docker instalado, puedes ejecutar la aplicación sin configurar Python
 
 1. **Construir una imagen:** `docker build -t bayeta-app .`
 2. **Ejecutar el contenedor:** `docker run -p 5000:5000 bayeta-app`
+
+### MongoDB
+Ahora se necesita un contenedor MongoDB corriendo en la misma red
