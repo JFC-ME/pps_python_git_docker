@@ -1,3 +1,21 @@
 # pps_python_git_docker
 Esta va a ser una aplicación Python del estilo "galleta de la fortuna" o "servilleta de
 bar"
+
+### Como ejecutar la aplicación
+
+Para garantizar que la aplicación funcione, por favor, sigue los siguientes pasos:
+
+### 1. Preparar el entorno virtual
+Se recomienda usar el entorno virtual de Python:
+- **Windows:** `python -m venv .venv` y activarlo con `.venv\Scripts\Activate.ps1`
+- **Mac/Linux:** `python -m venv .venv` y activarlo con `source .venv/bin/activate`
+
+### 2. Instalar dependencias
+Una vez activado el entorno, instala las librerías necesarias con el siguiente comando:
+```bash
+pip install -r requirements.txt```
+
+### 3. Comprobación
+Para comprobar que la aplicación funciona ejecuta:
+`python3 app.py`
