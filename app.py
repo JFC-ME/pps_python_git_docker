@@ -1,5 +1,5 @@
-from flask import Flask, jsonify
-from bayeta import frotar
+from flask import Flask, jsonify, request
+from bayeta import frotar, anyadir_frases_nuevas
 
 app = Flask(__name__)
 
@@ -11,6 +11,17 @@ def hola_mundo():
 def get_frotar(n_frases):
 	resultado = frotar(n_frases)
 	return jsonify({"frases": resultado})
+
+@app.route('/frotar/add', methods=['POST'])
+def post_frotar():
+	datos = request.get_json()
+	nuevas_frases = datos.get('frases', [])
+
+	if not nuevas_frases:
+		return jsonify({"error": "No se enviaron frases"}), 400
+
+	anyadir_frases_nuevas(nuevas_frases)
+	return jsonify({"mensaje": "Frases añadidas correctamente"}), 200
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=5000)

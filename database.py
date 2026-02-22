@@ -21,3 +21,9 @@ def consultar_frases(n_frases=1):
 	pipeline = [{"$sample": {"size": n_frases}}]
 	cursor = coleccion.aggregate(pipeline)
 	return [doc['texto'] for doc in cursor]
+
+def insertar_frases(frases_lista):
+	coleccion = get_db()
+	documentos = [{"texto": f} for f in frases_lista]
+	if documentos:
+		coleccion.insert_many(documentos)
