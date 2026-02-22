@@ -31,7 +31,10 @@ Si tienes Docker instalado, puedes ejecutar la aplicación sin configurar Python
 2. **Ejecutar el contenedor:** `docker run -p 5000:5000 bayeta-app`
 
 ### MongoDB
-Ahora se necesita un contenedor MongoDB corriendo en la misma red
+Ahora se necesita un contenedor MongoDB corriendo en la misma red.
+
+### POST
+Realizando una petición POST al endpoint /frotar/add se pueden agregar frases a la base de datos de nuestra aplicación web.
 
 ### Docker-Compose
 Para levantar todo el entorno (aplicación + base de datos) solo necesitas ejecutar:
