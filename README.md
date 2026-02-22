@@ -40,4 +40,4 @@ docker compose up --build
 ```
 
 ### POST
-Realizando una petición POST al endpoint /frotar/add se pueden agregar frases a la base de datos de nuestra aplicación web.
+Realizando una petición POST al endpoint `/frotar/add` se pueden agregar frases a la base de datos de nuestra aplicación web.
