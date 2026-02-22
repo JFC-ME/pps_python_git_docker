@@ -1,0 +1,21 @@
+services:
+  db:
+    image: mongo:latest
+    container_name: mongo-bayeta
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  app:
+    build: .
+    container_name: bayeta-app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    environment:
+      - MONGO_HOST=db
+
+volumes:
+  mongo-data:

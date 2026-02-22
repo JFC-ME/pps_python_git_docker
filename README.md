@@ -32,3 +32,9 @@ Si tienes Docker instalado, puedes ejecutar la aplicación sin configurar Python
 
 ### MongoDB
 Ahora se necesita un contenedor MongoDB corriendo en la misma red
+
+### Docker-Compose
+Para levantar todo el entorno (aplicación + base de datos) solo necesitas ejecutar:
+```bash
+docker compose up --build
+```

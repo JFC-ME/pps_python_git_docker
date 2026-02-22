@@ -15,7 +15,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 FROM builder AS runtime
 
 # Copiamos el código de la aplicación y las frases
-COPY app.py bayeta.py frases.txt .
+COPY . .
 
 # Exponemos el puerto de Flask
 EXPOSE 5000
